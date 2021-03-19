@@ -1,0 +1,33 @@
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button {
+    all: unset;
+    position: relative;
+    border: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: $darkHighlightedColor;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    background-color: transparent;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: $darkHighlightedColor;
+      bottom: 0;
+      left: 0;
+      opacity: 0.62;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}

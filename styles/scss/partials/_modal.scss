@@ -1,0 +1,150 @@
+.modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  &.show {
+    display: block;
+  }
+  .modal-content {
+    background-color: #fff;
+    position: relative;
+    margin: 2% auto;
+    width: 86%;
+    height: 89%;
+    padding: 0;
+    outline: none;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    @include responsive(phone-land) {
+      width: 90%;
+    }
+    .zoomInOut-btn {
+      position: absolute;
+      top: 0;
+      right: 36px;
+      font-weight: 400;
+      z-index: 1;
+      max-height: 38px;
+      height: 100%;
+
+      button {
+        all: unset;
+        display: block;
+        float: left;
+        font-size: 3rem;
+        padding: 0 1rem;
+        cursor: pointer;
+        color: #e5b479;
+        background-color: $primaryColor;
+        max-height: 38px;
+        height: 100%;
+        outline: none;
+      }
+    }
+    .img-cover {
+      height: 100%;
+      overflow: hidden;
+      outline: none;
+      img {
+        // width: 100%;
+        // height: 100%;
+        // object-fit: cover;
+        // margin: 0 auto;
+        display: block;
+      }
+    }
+    .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #e5b479;
+      background-color: $primaryColor;
+      font-size: 3rem;
+      z-index: 1;
+      line-height: 0.6;
+      padding: 1rem;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .yt-player {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        @include responsive(tab-port) {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+  .modals-cover {
+    display: block;
+  }
+}
+
+.modals-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  display: none;
+}
+
+.common-cover {
+  height: 100%;
+}
+
+.slick-list,
+.slick-track,
+.ex1 {
+  height: 100%;
+}
+.panzoom,
+.panzoom1 {
+  height: 100%;
+}
+
+.termsModal {
+  .modal-content {
+    padding: 3.5rem 0 3.5rem 3rem;
+    .modal-body {
+      height: 100%;
+      padding-right: 3rem;
+      overflow-y: auto;
+      .dark {
+        font-weight: 500;
+        color: $primaryColor;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      ul {
+        padding-left: 0;
+        li {
+          list-style: inside;
+          font-size: 1.4rem;
+          font-weight: 300;
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+}

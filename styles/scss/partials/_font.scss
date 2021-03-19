@@ -1,0 +1,39 @@
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-XLight.otf) format("opentype"),
+    url(../../fonts/Verlag-Font/Verlag-XLight.ttf) format("truetype"),
+    url(../../fonts/Verlag-Font/Verlag-XLight.woff) format("woff"),
+    url(../../fonts/Verlag-Font/Verlag-XLight.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Light.otf) format("opentype"),
+    url(../../fonts/Verlag-Font/Verlag-Light.ttf) format("truetype"),
+    url(../../fonts/Verlag-Font/Verlag-Light.woff) format("woff"),
+    url(../../fonts/Verlag-Font/Verlag-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Book.otf) format("opentype"),
+    url(../../fonts/Verlag-Font/Verlag-Book.ttf) format("truetype"),
+    url(../../fonts/Verlag-Font/Verlag-Book.woff) format("woff"),
+    url(../../fonts/Verlag-Font/Verlag-Book.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Bold.otf) format("opentype"),
+    url(../../fonts/Verlag-Font/Verlag-Bold.ttf) format("truetype"),
+    url(../../fonts/Verlag-Font/Verlag-Bold.woff) format("woff"),
+    url(../../fonts/Verlag-Font/Verlag-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}

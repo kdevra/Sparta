@@ -1,0 +1,215 @@
+$footerColor: #f4f4f4;
+$footerPcolor: #d1d3d4;
+footer {
+  color: $footerColor;
+  background-color: $primaryColor;
+  padding-top: 5rem;
+  .row {
+    > div {
+      @include responsive(tab-port) {
+        flex: 0 0 50%;
+        margin-bottom: 2rem;
+        max-width: 50%;
+      }
+      @include responsive(phone-port) {
+        flex: 0 0 100%;
+        margin-bottom: 3rem;
+        max-width: 100%;
+      }
+    }
+  }
+  .footer-top {
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 2.8rem;
+    }
+    p {
+      color: $footerPcolor;
+      line-height: 1.4;
+      font-weight: 100;
+      max-width: 270px;
+    }
+    ul {
+      li {
+        display: flex;
+        line-height: 2;
+        a {
+          color: $footerPcolor;
+          text-decoration: none;
+          font-weight: 300;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .top-last {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      h3 {
+        margin-bottom: 2rem;
+      }
+      .social-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100px;
+      }
+      .subscribe {
+        h3 {
+          margin-bottom: 0.5rem;
+          @include responsive(phone-land) {
+            margin-top: 3rem;
+          }
+          @include responsive(phone-port) {
+            margin-top: 3rem;
+          }
+        }
+        button {
+          color: $footerPcolor !important;
+          margin-top: 3rem;
+          line-height: 1.8;
+          &::after {
+            background-color: $footerPcolor !important;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    > div {
+      margin-top: 4rem;
+      @include responsive(tab-port) {
+        margin-top: 1rem;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        width: 98%;
+        height: 1px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #f4f4f4;
+        opacity: 0.13;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding: 2rem 0;
+        @include responsive(phone-land) {
+          text-align: center;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  @include responsive(phone-land) {
+    height: 40px;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.6rem;
+    font-family: DNLP;
+    font-weight: 300;
+    &:focus,
+    &.float {
+      & + label {
+        &::after {
+          transform: scale(1, 1);
+        }
+        .content-name {
+          transform: translateY(-120%);
+          font-size: 1.2rem;
+          color: $whiteColor;
+          font-weight: 500;
+          @include responsive(phone-port) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    @include responsive(tab-port) {
+      font-size: 1.5rem;
+    }
+    @include responsive(phone-port) {
+      font-size: 1.4rem;
+    }
+  }
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 100;
+    margin-bottom: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 3px solid $whiteColor;
+      transform: scale(0, 1);
+      transition: transform 0.3s ease;
+    }
+    .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: all 0.3s ease;
+      letter-spacing: 1.17px;
+      font-size: 1.4rem;
+      @include responsive(phone-port) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.disclaimer-footer {
+  margin-top: 3rem;
+  font-size: 1rem;
+  @include responsive(phone-land) {
+    margin-top: 0;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  h3 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    @include responsive(phone-land) {
+      margin-bottom: 2rem !important;
+    }
+  }
+  span {
+    color: #d1d3d4;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}

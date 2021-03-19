@@ -1,0 +1,1629 @@
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-XLight.otf) format("opentype"), url(../../fonts/Verlag-Font/Verlag-XLight.ttf) format("truetype"), url(../../fonts/Verlag-Font/Verlag-XLight.woff) format("woff"), url(../../fonts/Verlag-Font/Verlag-XLight.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Light.otf) format("opentype"), url(../../fonts/Verlag-Font/Verlag-Light.ttf) format("truetype"), url(../../fonts/Verlag-Font/Verlag-Light.woff) format("woff"), url(../../fonts/Verlag-Font/Verlag-Light.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Book.otf) format("opentype"), url(../../fonts/Verlag-Font/Verlag-Book.ttf) format("truetype"), url(../../fonts/Verlag-Font/Verlag-Book.woff) format("woff"), url(../../fonts/Verlag-Font/Verlag-Book.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: DNLP;
+  src: url(../../fonts/Verlag-Font/Verlag-Bold.otf) format("opentype"), url(../../fonts/Verlag-Font/Verlag-Bold.ttf) format("truetype"), url(../../fonts/Verlag-Font/Verlag-Bold.woff) format("woff"), url(../../fonts/Verlag-Font/Verlag-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+label {
+  font-size: 1.4rem;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type='checkbox'],
+input[type='radio'] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Shared Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: DNLP !important;
+  font-weight: 500;
+  color: #333333;
+  font-size: 1.4rem;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: DNLP;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+/* grid */
+.row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+[class*="col-"],
+.container,
+.full-container {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.mt-1 {
+  margin-top: 1.6rem;
+}
+
+/* simplebar scroll*/
+.simplebar-track {
+  background-color: #d1d3d4;
+  width: 2px !important;
+  border-radius: 7px;
+}
+
+.simplebar-track .simplebar-scrollbar {
+  background-color: #840c6f;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-track .simplebar-scrollbar::before {
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #840c6f inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.cm-phone {
+  max-width: 300px;
+  height: 42px;
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  cursor: pointer;
+  background-color: #840c6f;
+  z-index: 3;
+  cursor: pointer;
+  display: block;
+  -webkit-transform: translateX(75%);
+          transform: translateX(75%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cm-phone::before {
+  content: "\64";
+  font-family: "birla-estates" !important;
+  font-size: 20px;
+  color: #e5b479;
+}
+
+.cm-phone:hover {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.cm-phone span {
+  color: #e5b479;
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-group .button {
+  all: unset;
+  position: relative;
+  border: none;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #dbb467;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  background-color: transparent;
+}
+
+.button-group .button::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 2px;
+  background: #dbb467;
+  bottom: 0;
+  left: 0;
+  opacity: 0.62;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button-group .button:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.project-form-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 0;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .project-form-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .project-form-header .rera-detail {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+
+.project-form-header span {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.project-form-header span:last-child {
+  margin-right: 0;
+}
+
+.project-form-header a {
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.project-form-header .primary-color {
+  color: #840c6f;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-form-header {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .project-form-header {
+    padding: 0;
+    z-index: 3;
+  }
+}
+
+.project-form-header .project-logo {
+  max-width: 100px;
+  margin: 0 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-form-header .project-logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 70%;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .project-form-header .project-logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0.8rem;
+    max-width: 100%;
+  }
+}
+
+.project-form-header .project-logo img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-form-header .project-logo img {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .project-form-header .project-logo img {
+    max-width: 100px;
+  }
+}
+
+.application-form {
+  padding: 10px 5px 20px;
+  position: relative;
+}
+
+.application-form .row {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.application-form sup {
+  top: -2px;
+}
+
+.application-form .button-group {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .button-group {
+    font-size: 1.7rem;
+  }
+}
+
+.application-form p {
+  font-weight: 300;
+}
+
+.application-form h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.application-form h4.signup {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form h4 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form h4 {
+    font-size: 1.6rem;
+  }
+}
+
+.application-form .form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1200px) {
+  .application-form .form-group {
+    max-width: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form .form-group {
+    max-width: 50% !important;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 50% !important;
+            flex: 0 0 50% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .form-group {
+    max-width: 100% !important;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+  }
+}
+
+.application-form .form-group input,
+.application-form .form-group select {
+  width: 100%;
+  height: 34px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  font-size: 1.6rem;
+  font-family: DNLP;
+  font-weight: 300;
+  color: #333;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form .form-group input,
+  .application-form .form-group select {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .form-group input,
+  .application-form .form-group select {
+    font-size: 1.2rem;
+  }
+}
+
+.application-form .form-group label {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #ffffff;
+  font-weight: 100;
+  margin-bottom: 0;
+  color: #840c6f;
+  font-weight: 300;
+}
+
+.application-form .error {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  color: red;
+  display: none;
+}
+
+.application-form .term-condition-cover {
+  height: auto;
+}
+
+.application-form .term-condition-cover .term-condition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.application-form .term-condition-cover .term-condition h2 {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .term-condition-cover .term-condition h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .term-condition-cover .term-condition h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.application-form .term-condition-cover .term-condition li {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .term-condition-cover .term-condition li {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .term-condition-cover .term-condition li {
+    font-size: 1.2rem;
+  }
+}
+
+.application-form .term-condition-cover .term-condition ol {
+  padding-left: 2.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .term-condition-cover .term-condition ol {
+    padding-left: 2rem;
+  }
+}
+
+.application-form .term-condition-cover .term-condition ol li {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .term-condition-cover .term-condition ol li {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .term-condition-cover .term-condition ol li {
+    font-size: 1.2rem;
+  }
+}
+
+.application-form .term-condition-cover .term-condition ol li ul {
+  padding-left: 1rem;
+}
+
+.application-form .term-condition-cover .term-condition ol li ul li {
+  list-style: lower-roman;
+}
+
+.application-form .term-condition-cover .term-condition .term-condition-checkbox {
+  margin-top: 1rem;
+}
+
+.application-form .term-condition-cover .term-condition .term-condition-checkbox input {
+  width: auto;
+  height: auto;
+  background: unset;
+  margin-right: 5px;
+}
+
+.application-form .term-condition-cover .term-condition .term-condition-checkbox input + label {
+  border: none;
+  position: relative;
+  pointer-events: all;
+}
+
+.application-form .term-condition-cover .term-condition .term-condition-checkbox input + label::after {
+  border: none;
+}
+
+.form-group-diff {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .form-group-diff {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff.topmargin {
+    margin-top: 0.4rem;
+  }
+}
+
+.form-group-diff .content-name {
+  font-size: 1.4rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 1rem;
+  color: #840c6f;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff .content-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .form-group-diff .content-name {
+    font-size: 1.1rem;
+  }
+}
+
+.form-group-diff .checkbox-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff .checkbox-cover {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.form-group-diff .checkbox-cover .cmn-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+  height: 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.form-group-diff .checkbox-cover .cmn-box:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff .checkbox-cover .cmn-box {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .form-group-diff .checkbox-cover .cmn-box {
+    font-size: 1.1rem;
+  }
+}
+
+.form-group-diff .checkbox-cover .cmn-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-group-diff .checkbox-cover .cmn-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #840c6f;
+  border-radius: 3px;
+}
+
+.form-group-diff .checkbox-cover .cmn-box .checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 4px;
+  height: 10px;
+  border: solid #840c6f;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-group-diff .checkbox-cover .cmn-box input:checked ~ .checkmark::after,
+.form-group-diff .checkbox-cover .cmn-box:hover input ~ .checkmark::after {
+  display: block;
+}
+
+.form-group-diff .radio-btn-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff .radio-btn-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.form-group-diff .radio-btn-cover .cmn-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+  height: 20px;
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-group-diff .radio-btn-cover .cmn-box {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .form-group-diff .radio-btn-cover .cmn-box {
+    font-size: 1.1rem;
+  }
+}
+
+.form-group-diff .radio-btn-cover .cmn-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-group-diff .radio-btn-cover .cmn-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #840c6f;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-group-diff .radio-btn-cover .cmn-box .checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+
+.form-group-diff .radio-btn-cover .cmn-box input:checked ~ .checkmark::after,
+.form-group-diff .radio-btn-cover .cmn-box:hover input ~ .checkmark::after {
+  display: block;
+}
+
+.application-form .to {
+  font-size: 2rem;
+}
+
+.application-form .company-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.application-form .company-address span {
+  display: block;
+}
+
+.application-form .company-address .office {
+  margin-bottom: 1rem;
+}
+
+.application-form .company-address .reg-office {
+  margin-bottom: 2rem;
+}
+
+.application-form .applicants-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form .applicants-photo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .applicants-photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.application-form .applicants-photo > div {
+  margin-right: 2rem;
+}
+
+.application-form .applicants-photo > div:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 460px) {
+  .application-form .applicants-photo > div {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.application-form .applicants-photo > div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #333;
+  width: 100%;
+  height: 170px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.application-form .applicants-photo input {
+  border: none;
+  padding-left: 0;
+}
+
+.application-form .project-details-text {
+  margin-bottom: 2rem;
+}
+
+.application-form .project-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 2rem;
+}
+
+.application-form .project-name p:last-child {
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+.application-form .fixed-size-label span {
+  display: inline-block;
+  line-height: 1.4;
+  max-width: 100px;
+}
+
+.break-line {
+  display: block;
+}
+
+.cmn-applicants-box h3 {
+  margin: 2rem 0 1rem;
+}
+
+.cmn-applicants-box h4 {
+  margin-bottom: 0.4rem;
+  text-transform: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.note-for-all-applicants h3 {
+  margin: 1rem 0 0.6rem;
+}
+
+.note-for-all-applicants ol {
+  padding-left: 1.5rem;
+}
+
+.note-for-all-applicants ol li {
+  list-style: inherit;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.floor-residence-and-car-parking-details h3 {
+  margin: 2rem 0 1rem;
+}
+
+.floor-residence-and-car-parking-details h4 {
+  margin-bottom: 0.4rem;
+  text-transform: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.floor-residence-and-car-parking-details h5 {
+  margin-bottom: 0.4rem;
+  text-transform: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.floor-residence-and-car-parking-details p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 1rem 0 0;
+}
+
+.payment-details h3 {
+  margin: 2rem 0 1rem;
+  text-transform: uppercase;
+}
+
+.payment-details p {
+  margin-bottom: 1.6rem;
+}
+
+.payment-details .signature-box {
+  padding: 5rem 2rem;
+  margin-bottom: 4rem;
+  border: 1px solid #333;
+}
+
+.payment-details .signature-box > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 2rem 0 5rem;
+  font-size: 1.6rem;
+}
+
+.payment-details .signature-box .form-group p {
+  border-bottom: 1px solid #333;
+  padding: 2rem;
+  margin-bottom: 2px;
+}
+
+.payment-details .signature-box .form-group input {
+  border: none;
+  padding: 0;
+}
+
+.payment-details .signature-box label {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+}
+
+.schedule1-termsConditions h3 {
+  margin: 2rem 0 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.schedule1-termsConditions input {
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.schedule1-termsConditions ol {
+  padding-left: 2rem;
+}
+
+.schedule1-termsConditions ol li {
+  list-style: inherit;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.schedule2-map h3 {
+  margin: 2rem 0 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.schedule2-map img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.schedule3-floor-specifications h3 {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.schedule3-floor-specifications table {
+  width: 100%;
+}
+
+.schedule3-floor-specifications table th {
+  text-align: left;
+  padding: 1.5rem 0 0;
+}
+
+.schedule3-floor-specifications table th span {
+  font-weight: 400;
+}
+
+.schedule3-floor-specifications table th:nth-child(2) {
+  width: 75%;
+  padding-left: 2rem;
+}
+
+.schedule3-floor-specifications table td {
+  text-align: left;
+  padding: 0.2rem 0;
+  vertical-align: top;
+}
+
+.schedule3-floor-specifications table td:last-child {
+  width: 75%;
+  padding-left: 2rem;
+}
+
+.schedule4-common-areas h3 {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.schedule4-common-areas p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.schedule4-common-areas ol {
+  padding-left: 2rem;
+}
+
+.schedule4-common-areas li {
+  list-style: lower-roman;
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+.schedule4-common-areas li:first-child {
+  margin-top: 2rem;
+}
+
+.schedule5-priceSheet-paymentPlan h3 {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+/*# sourceMappingURL=application-form.css.map */

@@ -1,0 +1,401 @@
+@import "./partials/font";
+@import "./partials/typography";
+@import "./partials/reset";
+@import "./partials/shared";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/button";
+@import "./partials/slider";
+@import "./partials/modal";
+
+body {
+  min-height: 100vh;
+}
+
+.fade-in {
+  background-color: $whiteColor;
+  transition: all 0.5s ease-in;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  padding-top: 0;
+  padding-left: 7.6%;
+  @include responsive(tab-port) {
+    padding: 0;
+  }
+  @include responsive(phone-land) {
+    padding: 0;
+    z-index: 3;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    @include responsive(tab-port) {
+      justify-content: flex-start;
+      max-width: 70%;
+      margin-left: 2rem;
+    }
+    @include responsive(phone-land) {
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0.8rem;
+      max-width: 100%;
+    }
+    img {
+      @include responsive(tab-port) {
+        max-width: 14%;
+      }
+      @include responsive(phone-land) {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.login-container {
+  .row {
+    @include responsive(phone-land) {
+      flex-direction: column;
+    }
+    .left-section {
+      padding: 0;
+      @include responsive(tab-port) {
+        width: 70%;
+      }
+      @include responsive(phone-land) {
+        width: 100%;
+      }
+    }
+    .right-section {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include responsive(tab-port) {
+        width: 30%;
+      }
+      @include responsive(phone-land) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+form {
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .button-group .button {
+    color: #001489;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    &::after {
+      background: #001489;
+      width: 22px;
+      height: 1px;
+      left: -5px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: #001489;
+      left: -5px;
+      top: 1px;
+      width: 1px;
+      height: 22px;
+      opacity: 0.63;
+    }
+  }
+  .userName {
+    background: url(../../images/loginUserIcon.svg) no-repeat !important;
+    background-position: right 22px !important;
+  }
+  .password {
+    background: url(../../images/passwordLockIcon.svg) no-repeat !important;
+    background-position: right 22px !important;
+  }
+  .loginFooter {
+    color: #2c2c2c;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .login-form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3rem;
+    background: #fff;
+    position: absolute;
+    left: -50%;
+    border-radius: 1.6rem;
+    min-width: 400px;
+    box-shadow: 0px 10px 30px #bababa29;
+    border-radius: 5px;
+    color: #485397;
+    z-index: 2;
+    row-gap: 8rem;
+    @include responsive(phone-land) {
+      row-gap: 4rem;
+    }
+    @include responsive(tab-land) {
+      min-width: 400px;
+      left: -80%;
+      padding: 3rem 5rem;
+    }
+    @include responsive(tab-port) {
+      min-height: 400px;
+      padding: 2.5rem 4rem;
+      width: 320px;
+      left: -60%;
+    }
+    @include responsive(phone-land) {
+      top: 2vh;
+      max-width: 100%;
+      width: 70%;
+      left: 0;
+      right: 0;
+      min-width: 350px;
+      margin: 0 auto;
+    }
+    @include responsive(phone-port) {
+      width: 94%;
+      min-width: 280px;
+      min-height: 360px;
+    }
+    .form-top {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      row-gap: 7rem;
+      @include responsive(phone-land) {
+        row-gap: 2rem;
+      }
+      .form-header {
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          & :first-child {
+            color: #2c2c2c;
+            font-size: 2.6rem;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include responsive(tab-port) {
+              font-size: 2rem;
+            }
+            @include responsive(phone-port) {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      .button-group {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.form-content {
+  h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    &.signup {
+      margin-bottom: 0;
+    }
+    text-transform: uppercase;
+    @include responsive(tab-port) {
+      font-size: 1.8rem;
+    }
+    @include responsive(phone-port) {
+      font-size: 1.6rem;
+    }
+  }
+  .form-group {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    @include responsive(phone-land) {
+      height: 50px;
+    }
+    select {
+      appearance: none;
+    }
+    input,
+    select {
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      padding-bottom: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.6rem;
+      font-family: DNLP;
+      font-weight: 500;
+      color: #333;
+      option {
+        color: #485397;
+      }
+      &:focus,
+      &.float {
+        & ~ label {
+          &::after {
+            transform: scale(1, 1);
+          }
+          .content-name {
+            transform: translateY(-120%);
+            font-size: 1.3rem;
+            color: #485397;
+            font-weight: 500;
+            @include responsive(phone-port) {
+              font-size: 1.3rem;
+            }
+          }
+        }
+        ~ i {
+          transform: rotate(45deg);
+        }
+      }
+      @include responsive(tab-port) {
+        font-size: 1.4rem;
+      }
+      @include responsive(phone-port) {
+        font-size: 1.4rem;
+      }
+    }
+    select:not([value=""]):valid {
+      ~ label {
+        &::after {
+          transform: scale(1, 1);
+        }
+        .content-name {
+          transform: translateY(-120%);
+          font-size: 1.3rem;
+          color: #485397;
+          font-weight: 500;
+          @include responsive(phone-port) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      ~ i {
+        transform: rotate(45deg);
+      }
+    }
+    label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid #485397;
+      font-weight: 100;
+      margin-bottom: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 3px solid #485397;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease;
+      }
+      .content-name {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        transition: all 0.3s ease;
+        letter-spacing: 1.17px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        @include responsive(phone-port) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  .error {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    color: red;
+    display: none;
+  }
+}
+
+.select[value=""] {
+  font-size: 0 !important;
+}
+
+// select with search
+.select2 {
+  width: 100% !important;
+  padding-top: 2rem !important;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+.select2-selection__rendered {
+  color: #fff !important;
+  padding-left: 0 !important;
+}
+.select2-selection__arrow {
+  display: none !important;
+}
+
+// multiple select
+.select2-container--default .select2-selection--multiple {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.select2-container--default.select2-container--focus
+  .select2-selection--multiple {
+  border: none !important;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background: transparent !important;
+  border-color: #fff !important;
+}
+.select2-selection__choice__remove {
+  color: #fff !important;
+}
+
+input {
+  &.float1 {
+    & + label {
+      .content-name {
+        transform: translateY(-160%) !important;
+      }
+    }
+  }
+}

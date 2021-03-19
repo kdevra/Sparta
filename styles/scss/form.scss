@@ -1,0 +1,492 @@
+@import './partials/font';
+@import './partials/typography';
+@import './partials/reset';
+@import './partials/shared';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/button';
+
+body {
+  min-height: 100vh;
+}
+
+.project-form-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 0;
+  background-color: $whiteColor;
+
+  @include responsive(phone-land) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .rera-detail {
+    @include responsive(phone-land) {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+  span {
+    margin-right: 1rem;
+    display: inline-block;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    margin-left: 1rem;
+    display: inline-block;
+  }
+  .primary-color {
+    color: $primaryColor;
+  }
+  @include responsive(tab-port) {
+    padding: 0;
+  }
+  @include responsive(phone-land) {
+    padding: 0;
+    z-index: 3;
+  }
+  .project-logo {
+    max-width: 100px;
+    margin: 0 0 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include responsive(tab-port) {
+      justify-content: flex-start;
+      max-width: 70%;
+      margin-left: 2rem;
+    }
+    @include responsive(phone-land) {
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0.8rem;
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+      @include responsive(tab-port) {
+        max-width: 14%;
+      }
+      @include responsive(phone-land) {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+form {
+  padding: 10px 0 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .login-form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 5rem 4rem;
+    background: $primaryColor;
+    border-radius: 1.6rem;
+    max-width: 1100px;
+    margin: auto;
+    box-shadow: 2px 5px 15px rgba(132, 12, 111, 0.1);
+    color: $whiteColor;
+    @include responsive(phone-land) {
+      padding: 1rem 2rem 3rem;
+    }
+    .button-group {
+      margin-top: 1rem;
+      text-align: center;
+      @include responsive(phone-land) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.form-content {
+  h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    &.signup {
+      margin-bottom: 0;
+    }
+    text-transform: uppercase;
+    @include responsive(tab-port) {
+      font-size: 1.8rem;
+    }
+    @include responsive(phone-port) {
+      font-size: 1.6rem;
+    }
+  }
+  .form-group {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 100;
+    @include responsive(phone-land) {
+      height: 45px;
+      margin-bottom: 1rem;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      padding-bottom: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.6rem;
+      font-family: DNLP;
+      font-weight: 300;
+      &:focus,
+      &.float {
+        & + label {
+          &::after {
+            transform: scale(1, 1);
+          }
+          .content-name {
+            transform: translateY(-150%);
+            font-size: 1.4rem;
+            color: $whiteColor;
+            font-weight: 500;
+            @include responsive(phone-land) {
+              font-size: 1rem;
+              transform: translateY(-16px);
+            }
+          }
+        }
+      }
+      @include responsive(tab-port) {
+        font-size: 1.3rem;
+      }
+      @include responsive(phone-port) {
+        font-size: 1.2rem;
+      }
+    }
+    label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid $whiteColor;
+      font-weight: 100;
+      margin-bottom: 0;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 3px solid $whiteColor;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease;
+      }
+      .content-name {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 0.3s ease;
+        letter-spacing: 1.17px;
+        font-size: 1.6rem;
+        @include responsive(phone-land) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  .error {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    color: red;
+    display: none;
+  }
+  .term-condition-cover {
+    height: auto;
+    .term-condition {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: 0;
+      font-weight: 300;
+      font-size: 1.2rem;
+      word-break: break-word;
+      h2 {
+        margin-bottom: 1rem;
+        margin-top: 0;
+        @include responsive(phone-land) {
+          font-size: 1.4rem;
+        }
+        @include responsive(phone-port) {
+          font-size: 1.3rem;
+        }
+      }
+      li {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        @include responsive(phone-land) {
+          font-size: 1.3rem;
+        }
+        @include responsive(phone-port) {
+          font-size: 1.2rem;
+        }
+      }
+      ol {
+        padding-left: 2.5rem;
+        @include responsive(phone-land) {
+          padding-left: 2rem;
+        }
+        li {
+          line-height: 1.6;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          list-style: decimal-leading-zero;
+          @include responsive(phone-land) {
+            font-size: 1.3rem;
+          }
+          @include responsive(phone-port) {
+            font-size: 1.2rem;
+          }
+          ul {
+            padding-left: 1rem;
+            li {
+              list-style: lower-roman;
+            }
+          }
+        }
+      }
+      .term-condition-checkbox {
+        margin-top: 1rem;
+        input {
+          width: auto;
+          height: auto;
+          background: unset;
+          margin-right: 5px;
+          & + label {
+            border: none;
+            position: relative;
+            pointer-events: all;
+            &::after {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-group-diff {
+  margin-top: 1rem;
+  @include responsive(phone-land) {
+    margin-top: 2rem;
+  }
+  &.topmargin {
+    @include responsive(phone-land) {
+      margin-top: 0.4rem;
+    }
+  }
+  .content-name {
+    font-size: 1.6rem;
+    font-weight: 100;
+    display: block;
+    margin-bottom: 1rem;
+    letter-spacing: 1.17px;
+    @include responsive(phone-land) {
+      font-size: 1.3rem;
+    }
+    @include responsive(phone-port) {
+      font-size: 1.1rem;
+    }
+  }
+  .checkbox-cover {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include responsive(phone-land) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .cmn-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 3rem;
+      height: 20px;
+      font-size: 1.6rem;
+      font-weight: 100;
+      margin-right: 3rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      @include responsive(phone-land) {
+        font-size: 1.3rem;
+        margin-bottom: 1.4rem;
+      }
+      @include responsive(phone-port) {
+        font-size: 1.1rem;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: 1px solid $whiteColor;
+        border-radius: 3px;
+        &::after {
+          content: '';
+          position: absolute;
+          display: none;
+          left: 6px;
+          top: 1px;
+          width: 4px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      & input:checked ~ .checkmark,
+      &:hover input ~ .checkmark {
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+  .radio-btn-cover {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include responsive(phone-land) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cmn-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 3rem;
+      height: 20px;
+      font-size: 1.6rem;
+      font-weight: 100;
+      margin-right: 4rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      @include responsive(phone-land) {
+        font-size: 1.3rem;
+        margin-bottom: 1.4rem;
+      }
+      @include responsive(phone-port) {
+        font-size: 1.1rem;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: 1px solid $whiteColor;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+          content: '';
+          position: absolute;
+          display: none;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: white;
+        }
+      }
+      & input:checked ~ .checkmark,
+      &:hover input ~ .checkmark {
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.swal2-popup {
+  font-size: 1.3rem;
+}
+
+.swal2-styled {
+  all: unset;
+  position: relative;
+  border: none;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: $primaryColor !important;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  background-color: transparent !important;
+  outline: none;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 2px;
+    background: $primaryColor;
+    bottom: 0;
+    left: 0;
+    opacity: 0.62;
+    transition: all 0.3s ease;
+  }
+  &:hover,
+  &:focus {
+    background: transparent !important;
+    outline: none;
+    box-shadow: none;
+    &::after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  a {
+    color: $primaryColor !important;
+    text-decoration: none;
+  }
+}
