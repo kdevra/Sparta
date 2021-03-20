@@ -1,150 +1,89 @@
+/* Popup Box */
+
+/* The Modal (background) */
 .modal {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  z-index: 20;
-  &.show {
-    display: block;
-  }
-  .modal-content {
-    background-color: #fff;
-    position: relative;
-    margin: 2% auto;
-    width: 86%;
-    height: 89%;
-    padding: 0;
-    outline: none;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    @include responsive(phone-land) {
-      width: 90%;
-    }
-    .zoomInOut-btn {
-      position: absolute;
-      top: 0;
-      right: 36px;
-      font-weight: 400;
-      z-index: 1;
-      max-height: 38px;
-      height: 100%;
-
-      button {
-        all: unset;
-        display: block;
-        float: left;
-        font-size: 3rem;
-        padding: 0 1rem;
-        cursor: pointer;
-        color: #e5b479;
-        background-color: $primaryColor;
-        max-height: 38px;
-        height: 100%;
-        outline: none;
-      }
-    }
-    .img-cover {
-      height: 100%;
-      overflow: hidden;
-      outline: none;
-      img {
-        // width: 100%;
-        // height: 100%;
-        // object-fit: cover;
-        // margin: 0 auto;
-        display: block;
-      }
-    }
-    .closeBtn {
-      position: absolute;
-      top: 0;
-      right: 0;
-      color: #e5b479;
-      background-color: $primaryColor;
-      font-size: 3rem;
-      z-index: 1;
-      line-height: 0.6;
-      padding: 1rem;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        cursor: pointer;
-      }
-    }
-    .yt-player {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      outline: none;
-      iframe {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        @include responsive(tab-port) {
-          height: 100%;
-        }
-      }
-    }
-  }
-}
-
-.modal-open {
-  overflow: hidden;
-  .modals-cover {
-    display: block;
-  }
-}
-
-.modals-cover {
-  position: fixed;
-  top: 0;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 8888; /* Sit on top */
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
-  display: none;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-.common-cover {
-  height: 100%;
-}
-
-.slick-list,
-.slick-track,
-.ex1 {
-  height: 100%;
-}
-.panzoom,
-.panzoom1 {
-  height: 100%;
-}
-
-.termsModal {
-  .modal-content {
-    padding: 3.5rem 0 3.5rem 3rem;
-    .modal-body {
-      height: 100%;
-      padding-right: 3rem;
-      overflow-y: auto;
-      .dark {
-        font-weight: 500;
-        color: $primaryColor;
-      }
-      p {
-        margin-bottom: 1rem;
-        font-size: 1.4rem;
-        font-weight: 300;
-      }
-      ul {
-        padding-left: 0;
-        li {
-          list-style: inside;
-          font-size: 1.4rem;
-          font-weight: 300;
-          margin-bottom: 0.4rem;
-        }
-      }
-    }
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10vh auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 90%; /* Could be more or less, depending on screen size */
+  position: relative;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  .customBtn {
+    background-color: #001489;
+    color: #fff;
+    font-weight: 300;
+    border: 1px solid #eeeee4;
+    border-radius: 5px;
+    padding: 5px 20px 7px;
+    margin-top: 20px;
   }
+  h2 {
+    color: #2c2c2c;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1366px) {
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10vh auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #001489;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.button {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: #02274a 1px solid;
+  padding: 0 0 3px 0;
+  font-size: 16px;
+}
+
+button.button:hover {
+  border-bottom: #a99567 1px solid;
+  color: #a99567;
 }
