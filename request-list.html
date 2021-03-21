@@ -2,13 +2,22 @@
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dashboard </title>
+<title>Request List </title>
 
 <!--Slider-->
 <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 <link rel="stylesheet" type="text/css" href="styles/classic.css" />
 <link rel="stylesheet" type="text/css" href="styles/classic.date.css" />
+
+<!-- Data Table -->
+
+    <link rel="stylesheet" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.9/css/dataTables.checkboxes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesome-bootstrap-checkbox/0.3.7/awesome-bootstrap-checkbox.css">
+<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.datatables.net/select/1.3.2/css/select.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+<link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.css" rel="stylesheet">
 
 <!-- simple scrollbar -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
@@ -68,8 +77,8 @@
                 <div class="topBox">
                     <div class="breadcrumb">
                         <ul>
-                            <li><a href="javascript:void(0);">Home</a></li>
-                            <li><a class="active" href="javascript:void(0);">Vignettes</a></li>
+                            <li><a href="dashboard.html">Home</a></li>
+                            <li><a class="active" href="javascript:void(0);">Request List</a></li>
                         </ul>
                     </div>
                     <nav>
@@ -84,68 +93,135 @@
                                 <a href="menu-management.html">Menu Management</a>
                             </li>
                             <li>
-                                <a href="request-list.html">Request List</a>
+                                <a class="active" href="javascript:void(0);">Request List</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="headingBox">
-                    <p>SPARTA</p>
-                    <p>Simplified Performance , Allocation , Risk and Trend Analysis</p>
+                <div class="tableBox">
+                    <h2>Request list</h2>
+                    <table id="requestList" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Menu Name    </th>
+                                <th>Request By</th>
+                                <th>Date</th>
+                                <th>Remarks</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Portfolio</td>
+                                <td>Admin</td>
+                                <td>04/11/21</td>
+                                <td>  <span class="view button" data-modal="view">View</span> </td>
+                                <td>
+                                    <p>
+                                        <span class="completeBtn button" data-modal="complete">Complete</span>
+                                        <span class="rejectBtn button" data-modal="reject">Reject</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Portfolio</td>
+                                <td>Admin</td>
+                                <td>04/11/21</td>
+                                <td>  <span class="view button" data-modal="view">View</span> </td>
+                                <td>
+                                    <p>
+                                        <span class="completeBtn button" data-modal="complete">Complete</span>
+                                        <span class="rejectBtn button" data-modal="reject">Reject</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                            </tbody>
+                    </table>
                 </div>
-                <div class="sliderBox">
-                    <div class="dashboard-slider">
-                        <div class="login-slider--item">
-                            <div class="slider-image">
-                                <img src="images/login-banner.png" alt="banner image" />
-                            </div>
-                        </div>
-                        <div class="login-slider--item">
-                            <div class="slider-image">
-                                <img src="images/login-banner.png" alt="banner image" />
-                            </div>
-                        </div>
-                        <div class="login-slider--item">
-                            <div class="slider-image">
-                                <img src="images/login-banner.png" alt="banner image" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="customBtn button" type="button" data-modal="modalOne">Request</button>
             </main>
         </div>
     </div>
     <div class="backDrop"></div>
 
-    <div id="modalOne" class="modal">
+    <div id="view" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <a class="close">X</a>
-                <h2>Request for arrange dashboard</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Request List</h3>
+                <div class="dataBox requestList">
+                    <div class="cmnDataBox">
+                        <span>1.</span>
+                        <span>Holdings</span>
+                    </div>
+                    <div class="cmnDataBox">
+                        <span>2.</span>
+                        <span>Performance</span>
+                    </div>
+                    <div class="cmnDataBox">
+                        <span>3.</span>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+                <h3>Remarks</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book.
+                </p>
+                <div class="button-group">
+                    <button type="submit" class="customBtn" id="loginConfirm">
+                        Ok
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="complete" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close">X</a>
             </div>
             <div class="modal-body">
                 <form >
-                    <div class="dataBox">
-                        <div class="cmnDataBox">
-                            <span>1.</span>
-                            <span>Holdings</span>
-                            <span>X</span>
-                        </div>
-                        <div class="cmnDataBox">
-                            <span>2.</span>
-                            <span>Performance</span>
-                            <span>X</span>
-                        </div>
-                        <div class="cmnDataBox">
-                            <span>3.</span>
-                            <span>Dashboard</span>
-                            <span>X</span>
-                        </div>
-                    </div>
                     <div class="form-content">
                         <div class="form-group">
-                            <label for="userName">Add Menu Name <sup>*</sup></label>
+                            <label for="userName">Menu Name </label>
+                            <input class="userName" type="text" name="userName" autocomplete="off" required placeholder="Portfolio" />
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">Add Link </label>
+                            <input class="userName" type="text" name="userName" autocomplete="off" required placeholder="Link" />
+                            
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="customBtn" id="loginConfirm">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="reject" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close">X</a>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="form-content">
+                        <div class="form-group">
+                            <label for="userName">Select Reason</label>
                             <input class="userName" type="text" name="userName" autocomplete="off" required placeholder="Enter Name" />
                             
                         </div>
@@ -157,7 +233,7 @@
                     </div>
                     <div class="button-group">
                         <button type="submit" class="customBtn" id="loginConfirm">
-                            Request
+                            Submit
                         </button>
                     </div>
                 </form>
@@ -175,9 +251,16 @@
     <!-- simple scrollbar -->
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 
+    <!-- Data Table -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.2/js/dataTables.select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.9/js/dataTables.checkboxes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"
         integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g=="
         crossorigin="anonymous"></script>
+
+        <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
 
     <!--Slider Script-->
     <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -187,6 +270,30 @@
     <script type="text/javascript" src="scripts/custom.js"></script>
     <script>
         $(document).ready(function(){
+            $('#requestList').DataTable( {
+                columnDefs: [ {
+                    orderable: false,
+                    className: 'select-checkbox',
+                    targets:   0
+                } ],
+                fixedHeader: true,
+                    responsive: true,
+                    scrollY: '246px',
+                    scrollX: true,
+                    ordering: false,
+                    "stripeClasses": [],
+                select: {
+                    style:    'os',
+                    selector: 'td:first-child'
+                },
+                "language": {
+                        "lengthMenu": "Row Length _MENU_",
+                        "search": "",
+                        searchPlaceholder: "Search...",
+                    },
+                "dom": '<"top"f>rt<"bottom"lip><"clear">',
+                order: [[ 1, 'asc' ]]
+            } );
             $(".headerLeft img").click("on",function(){                
                 $(".content").toggleClass("fullWidth");
                 if($(".sidebar").hasClass("hide")){
@@ -232,7 +339,18 @@
             });
         });
     </script>
-
+<script>
+      var uppy = Uppy.Core()
+        .use(Uppy.Dashboard, {
+          inline: true,
+          target: '#drag-drop-area'
+        })
+        .use(Uppy.Tus, {endpoint: 'https://master.tus.io/files/'}) //you can put upload URL here, where you want to upload images
+ 
+      uppy.on('complete', (result) => {
+        console.log('Upload complete! We’ve uploaded these files:', result.successful)
+      })
+    </script>
 </body>
 
 </html>

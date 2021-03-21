@@ -243,3 +243,538 @@ body {
     }
   }
 }
+
+.filterBox,
+.tableBox {
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px 20px 20px;
+  margin-bottom: 15px;
+}
+.filterBox {
+  form {
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      width: 100%;
+    }
+    display: flex;
+    row-gap: 15px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      width: 25%;
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+      sup {
+        color: red;
+      }
+      label {
+        color: #001489;
+      }
+      select,
+      input {
+        border: none;
+        border-bottom: 1px solid rgba(124, 124, 124, 0.57);
+        padding-left: 0;
+        padding-bottom: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .btn-box {
+      margin-top: 10px;
+      width: 100%;
+      button {
+        width: 80px;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
+
+.tableBox {
+  .dataTables_filter {
+    max-width: 250px !important;
+    width: 100%;
+    label {
+      max-width: 100% !important;
+      width: 100%;
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid #7c7c7c;
+      border-radius: 0;
+      padding-left: 0;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+  table {
+    color: #333333;
+    white-space: nowrap;
+    .view {
+      color: #001489;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .completeBtn {
+      background-color: #00a70b;
+      border-radius: 3px;
+      width: auto;
+      height: 24px;
+      padding: 5px 15px;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .rejectBtn {
+      background-color: #ff0000;
+      border-radius: 3px;
+      width: auto;
+      height: 24px;
+      padding: 3px 10px;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+  .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: none !important;
+  }
+  table th {
+    color: rgba(0, 20, 137, 1);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    padding: 10px !important;
+    border-bottom: 1px solid rgba(129, 142, 148, 0.15) !important;
+  }
+  table .checkbox label::before {
+    border: 1px solid rgba(0, 20, 137, 1);
+    outline: none;
+  }
+  table .checkbox input:focus + label::before {
+    outline: none !important;
+  }
+  table .checkbox label::after {
+    color: rgba(0, 20, 137, 1);
+  }
+  #example thead th,
+  #requestList thead th {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  table tbody tr:hover {
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: #fbfbfb;
+    padding: 18px 0;
+  }
+
+  table td {
+    padding: 5px 10px !important;
+    vertical-align: middle !important;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  table td input {
+    margin: 0 !important;
+  }
+
+  table tr.selected {
+    background-color: transparent !important;
+    color: #333 !important;
+  }
+
+  .dataTables_scroll {
+    width: 100%;
+  }
+
+  #example_wrapper .top {
+    display: none;
+  }
+  #example_wrapper .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    #example_wrapper .bottom {
+      flex-direction: column;
+      row-gap: 5px;
+      justify-content: center;
+    }
+    .dataTables_info {
+      margin: 0 !important;
+    }
+  }
+  @media (max-width: 440px) {
+    .top {
+      height: 100px;
+      align-items: flex-end !important;
+    }
+  }
+
+  .dataTables_info {
+    margin-left: auto;
+    padding: 0 !important;
+  }
+
+  #example_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    width: 100%;
+  }
+
+  .dataTables_filter label {
+    position: relative;
+    font-weight: 500 !important;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .top .dataTables_filter label input.form-control {
+    border: none;
+    margin-left: 15px !important;
+    max-width: 320px !important;
+    width: 100% !important;
+  }
+
+  .dataTables_filter label::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    background: url(./images/searchIcon.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  table td p {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin: 0 !important;
+  }
+
+  table td p span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+  }
+
+  #example_paginate a {
+    border: none !important;
+  }
+
+  #example_paginate a:hover {
+    background-color: white;
+  }
+
+  #example_paginate a i {
+    font-size: 8px !important;
+  }
+
+  .edit-icon,
+  .table-user-icon {
+    background-color: rgba(124, 124, 124, 1);
+    cursor: pointer;
+  }
+  .delete-icon {
+    background-color: #001489;
+    cursor: pointer;
+  }
+  .image-icon {
+    background-color: rgba(212, 136, 0, 1);
+    cursor: pointer;
+  }
+
+  .dataTables_length select {
+    padding: 0 !important;
+    width: 50px !important;
+    height: 20px;
+    margin-left: 10px;
+  }
+  table.dataTable tbody td.select-checkbox:before,
+  table.dataTable tbody td.select-checkbox:after,
+  table.dataTable tbody th.select-checkbox:before,
+  table.dataTable tbody th.select-checkbox:after {
+    top: unset;
+  }
+}
+
+.selectUser {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  max-height: 300px;
+  overflow: auto;
+  label {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(129, 142, 148, 0.15);
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background: rgba(247, 248, 255, 1);
+    }
+  }
+}
+.imageUpload {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.uppy-Dashboard-inner {
+  min-height: unset;
+  height: 200px !important;
+}
+.requestList {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+#view .modal-content {
+  width: 40%;
+  h3 {
+    color: #001489;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .dataBox .cmnDataBox span {
+    color: #2c2c2c;
+    margin-left: unset;
+    font-size: 14px;
+    line-height: unset;
+  }
+  .cmnDataBox {
+    justify-content: flex-start;
+    column-gap: 10px;
+    min-width: 150px;
+  }
+}
+
+#example_wrapper .top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+#example_wrapper .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.dataTables_info {
+  margin-left: auto;
+  padding: 0 !important;
+}
+
+#example_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+
+.dataTables_filter label {
+  position: relative;
+  font-weight: 500 !important;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.top .dataTables_filter label input.form-control {
+  border: 1px solid var(--color__accent);
+  max-width: 320px !important;
+  width: 100% !important;
+}
+
+.dataTables_filter label::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  background: url(../images/searchIcon.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+table td p {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0 !important;
+  justify-content: center;
+}
+
+table td p span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+}
+
+.dataTables_paginate {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#example_paginate a {
+  border: none !important;
+  padding: 0 6px !important;
+}
+
+#example_paginate a:hover {
+  background-color: white;
+}
+
+#example_paginate a i {
+  font-size: 8px !important;
+}
+
+.edit-icon {
+  background-color: #0069d5;
+}
+
+.delete-icon {
+  background-color: #e95124;
+}
+
+.dataTables_length select {
+  padding: 0 !important;
+  width: 50px !important;
+  height: 20px;
+  margin-left: 10px;
+}
+table tr td:last-child,
+table tr th:last-child {
+  position: sticky;
+  right: 0;
+  background-color: white;
+}
+
+button.dt-button,
+button.dt-button:hover {
+  background-color: #0061b0 !important;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none !important;
+  margin: 0;
+}
+.add-user {
+  margin-bottom: 5px;
+}
+
+.yearpicker-items.selected,
+.yearpicker-items:hover,
+.yearpicker-prev:hover,
+.yearpicker-next:hover {
+  color: var(--color__accent);
+}
+
+.uploadButton-cover {
+  width: 100%;
+  justify-content: flex-end;
+}
+.uploadButton-cover button,
+.uploadButton-cover button:focus {
+  background-color: #e95124;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 25px;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.filterForm .uploadButton-cover button {
+  align-self: unset;
+  padding: 8px 20px;
+}
+
+@media (max-width: 768px) {
+  #example_wrapper .bottom {
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dataTables_info {
+    margin: 0 !important;
+  }
+  .top {
+    padding-top: 10px !important;
+    align-items: flex-start !important;
+    column-gap: 10px;
+  }
+  .dataTables_wrapper .dataTables_filter {
+    margin-top: 0 !important;
+  }
+  .dataTables_filter label,
+  .top .dataTables_filter label input.form-control {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 440px) {
+  .top {
+    align-items: flex-end !important;
+  }
+  .add-user {
+    top: 15px;
+  }
+}
