@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Client Details </title>
+
+<!-- simple scrollbar -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+
+<!--Custom Styles-->
+<link rel="stylesheet" href="styles/main/dashboard.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebarClose">
+                <img src="images/cross.png" alt="cross image">
+            </div>
+            <div class="logo">
+                <img src="images/julius-baer-logo-black-and-white.png" alt="logo">
+            </div>
+            <div class="switchBox">
+                <a href="dashboard.html">Vignettes</a>
+                <img src="images/sliderRight.svg" alt="slider left icon">
+                <a href="javascript:void(0);">Report Deck</a>
+            </div>
+            <div class="searchBox">
+                <input type="text" placeholder="Search">
+            </div>
+            <ul class="menu">
+                <li class="main-menu"><a class="show" href="javascript:void(0);">
+                    <span>Client_1</span></a>
+                </li>
+                <li class="main-menu"><a href="javascript:void(0);">
+                    <span>Client_2</span></a>
+                </li>
+                <li class="main-menu"><a href="javascript:void(0);">
+                    <span>Client_3</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <header>
+                <div class="headerLeft">
+                    <img src="images/hamburgerIcon.svg" alt="hamburger icon">
+                    <h1>SPARTA</h1>
+                </div>
+                <div class="headerRight">
+                    <p><span>Welcome</span> Mr. Sagar Pushkarna</p>
+                    <img src="images/logoutIcon.svg" alt="logout icon">
+                </div>
+            </header>
+            <main>
+                <div class="topBox">
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="report-desk.html">Home</a></li>
+                            <li><a href="report-desk.html">Report Desk</a></li>
+                            <li><a class="active" href="javascript:void(0);">Client Details</a></li>
+                        </ul>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="user-management.html">User Management</a>
+                            </li>
+                            <li>
+                                <a href="upload-user-list.html">Upload User List</a>
+                            </li>
+                            <li>
+                                <a href="menu-management.html">Menu Management</a>
+                            </li>
+                            <li>
+                                <a href="request-list.html">Request List</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="headingBox">
+                    <p>SPARTA</p>
+                    <p>Simplified Performance , Allocation , Risk and Trend Analysis</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="backDrop"></div>
+
+
+    <!-- Default Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+        integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+
+    <!-- simple scrollbar -->
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"
+        integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g=="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".headerLeft img").click("on",function(){                
+                $(".content").toggleClass("fullWidth");
+                if($(".sidebar").hasClass("hide")){
+                    $(".sidebar").removeClass("hide");
+                    $(".backDrop").addClass("show");
+                } else {
+                    $(".sidebar").addClass("hide");
+                }
+            });
+
+            $(".sidebarClose").click("on", function () {
+                $(".sidebar").addClass("hide");
+                $(".backDrop").removeClass("show");
+            });
+
+            $(".main-menu > a").click(function () {
+                $(".main-menu > a").removeClass('show');
+                $(this).addClass('show');
+                $(".main-menu .submenu").removeClass('show');
+                $(this).parent().find("ul").addClass('show');
+            });
+            if ($(window).width() < 768) {
+                $(".sidebar").addClass("hide mobile")
+            } else {
+                $(".sidebar").removeClass("hide")
+            }
+            $(window).resize(function(){
+                if ($(window).width() < 768) {
+                    $(".sidebar").addClass("hide mobile")
+                } else {
+                    $(".sidebar").removeClass("hide")
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
