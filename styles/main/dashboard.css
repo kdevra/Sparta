@@ -969,7 +969,7 @@ select:-webkit-autofill:focus {
 }
 
 .modal-content .customBtn {
-  background-color: #001489;
+  background-color: #141e55;
   color: #fff;
   font-weight: 300;
   border: 1px solid #eeeee4;
@@ -1005,7 +1005,7 @@ select:-webkit-autofill:focus {
   color: #aaa;
   font-size: 11px;
   font-weight: bold;
-  background-color: #001489;
+  background-color: #141e55;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -1076,15 +1076,36 @@ header .headerLeft {
           column-gap: 10px;
 }
 
-header .headerLeft h1 {
-  color: #001489;
-  font-size: 18px;
-  font-weight: bold;
+header .headerLeft img {
+  cursor: pointer;
 }
 
-header .headerLeft img {
-  background-color: #001489;
-  cursor: pointer;
+header .headerMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
+}
+
+header .headerMiddle h1 {
+  color: #141e55;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+header .headerMiddle span {
+  color: #141e55;
 }
 
 header .headerRight {
@@ -1150,7 +1171,7 @@ header .headerRight img {
   row-gap: 15px;
   -webkit-box-shadow: 1px 1px 2px #00000028;
           box-shadow: 1px 1px 2px #00000028;
-  background-color: #001489;
+  background-color: #141e55;
   position: relative;
 }
 
@@ -1172,7 +1193,7 @@ header .headerRight img {
     display: block;
     position: absolute;
     right: -49px;
-    background-color: #001489;
+    background-color: #141e55;
     padding: 15px;
     z-index: 30;
   }
@@ -1236,7 +1257,7 @@ header .headerRight img {
 
 .sidebar .searchBox input {
   border: none;
-  background-color: #00179d;
+  background-color: rgba(0, 23, 157, 0.3);
   color: #fff;
   width: 100%;
   padding: 5px 0 5px 30px;
@@ -1295,7 +1316,7 @@ header .headerRight img {
   display: flex;
   border: none;
   text-decoration: none;
-  background-color: #00179d;
+  background-color: rgba(0, 23, 157, 0.3);
   color: #fff;
   width: 100%;
   padding: 5px 0 5px 15px;
@@ -1328,7 +1349,7 @@ header .headerRight img {
 }
 
 .sidebar .menu .submenu li a {
-  background-color: #001489;
+  background-color: #141e55;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1424,10 +1445,11 @@ body {
           align-items: center;
   -webkit-column-gap: 10px;
           column-gap: 10px;
+  align-items: center;
 }
 
 .wrapper .content main .topBox .breadcrumb ul a {
-  color: #001489;
+  color: #141e55;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -1437,13 +1459,17 @@ body {
   position: relative;
 }
 
+.wrapper .content main .topBox .breadcrumb ul a img {
+  vertical-align: initial;
+}
+
 .wrapper .content main .topBox .breadcrumb ul a::after {
   content: "|";
   color: #2c2c2c;
   height: 7px;
   position: absolute;
   right: -6px;
-  top: 2px;
+  top: 0;
   font-size: 12px;
   font-weight: 300;
   opacity: 0.7;
@@ -1504,7 +1530,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #001489;
+  background-color: #141e55;
   row-gap: 3px;
   padding: 9px 0;
   -webkit-box-shadow: 0px 3px 6px #00000029;
@@ -1524,7 +1550,7 @@ body {
 }
 
 .wrapper .content main .dashboard-slider {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 
@@ -1560,7 +1586,7 @@ body {
 }
 
 .wrapper .content main .slick-slider .slick-dots li.slick-active button:before {
-  border: 1px solid #001489;
+  border: 1px solid #141e55;
 }
 
 .wrapper .content main .slick-slider .slick-dots li button {
@@ -1575,13 +1601,13 @@ body {
   content: "";
   width: 100%;
   height: 10px;
-  background-color: #001489;
+  background-color: #141e55;
   border: 1px solid #ccc;
   border-radius: 100%;
 }
 
 .wrapper .content main .customBtn {
-  background-color: #001489;
+  background-color: #141e55;
   color: #fff;
   font-weight: 300;
   border: 1px solid #eeeee4;
@@ -1613,7 +1639,7 @@ body {
 }
 
 .modal-body form .form-content .form-group label {
-  color: #001489;
+  color: #141e55;
 }
 
 .modal-body form .form-content .form-group sup {
@@ -1663,7 +1689,7 @@ body {
 .dataBox .cmnDataBox span:last-child {
   margin-left: auto;
   font-size: 10px;
-  color: #001489;
+  color: #141e55;
   cursor: pointer;
   line-height: 1.6;
 }
@@ -1718,7 +1744,7 @@ body {
 }
 
 .filterBox form .form-group label {
-  color: #001489;
+  color: #141e55;
 }
 
 .filterBox form .form-group select,
@@ -1814,7 +1840,7 @@ body {
 }
 
 .tableBox table .view {
-  color: #001489;
+  color: #141e55;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -1846,7 +1872,7 @@ body {
 }
 
 .tableBox table th {
-  color: #001489;
+  color: #141e55;
   font-size: 14px;
   font-weight: 700;
   text-align: left;
@@ -1855,7 +1881,7 @@ body {
 }
 
 .tableBox table .checkbox label::before {
-  border: 1px solid #001489;
+  border: 1px solid #141e55;
   outline: none;
 }
 
@@ -1864,7 +1890,7 @@ body {
 }
 
 .tableBox table .checkbox label::after {
-  color: #001489;
+  color: #141e55;
 }
 
 .tableBox #example thead th,
@@ -2037,7 +2063,7 @@ body {
 }
 
 .tableBox .delete-icon {
-  background-color: #001489;
+  background-color: #141e55;
   cursor: pointer;
 }
 
@@ -2129,7 +2155,7 @@ body {
 }
 
 #view .modal-content h3 {
-  color: #001489;
+  color: #141e55;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -2183,7 +2209,7 @@ body {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #001489;
+  background-color: #141e55;
   border-radius: 5px;
   color: #fff;
 }
@@ -2220,7 +2246,7 @@ body {
 }
 
 .progress {
-  color: #001489;
+  color: #141e55;
 }
 
 .complete {
@@ -2235,12 +2261,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   background-color: #fff;
   margin-top: 15px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2345,11 +2371,19 @@ body {
 }
 
 #uploadImages .uploadedFile .fileCmnBox span:last-child {
-  color: #001489;
+  color: #141e55;
   cursor: pointer;
 }
 
 .clientListBox {
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  max-height: 385px;
+  overflow: auto;
+}
+
+.clientListBox .simplebar-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2358,15 +2392,14 @@ body {
   row-gap: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 15px;
-  max-height: 300px;
-  overflow: auto;
+  padding: 10px !important;
 }
 
-.clientListBox .clientCmnBox {
+.clientListBox .simplebar-content::before {
+  display: none !important;
+}
+
+.clientListBox .simplebar-content .clientCmnBox {
   background-color: #fff;
   padding: 5px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
@@ -2376,30 +2409,30 @@ body {
 }
 
 @media only screen and (max-width: 1250px) {
-  .clientListBox .clientCmnBox {
+  .clientListBox .simplebar-content .clientCmnBox {
     max-width: 49%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .clientListBox .clientCmnBox {
+  .clientListBox .simplebar-content .clientCmnBox {
     max-width: 48%;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .clientListBox .clientCmnBox {
+  .clientListBox .simplebar-content .clientCmnBox {
     max-width: 48%;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .clientListBox .clientCmnBox {
+  .clientListBox .simplebar-content .clientCmnBox {
     max-width: 100%;
   }
 }
 
-.clientListBox .clientCmnBox img {
+.clientListBox .simplebar-content .clientCmnBox img {
   max-width: 100%;
   width: auto;
   opacity: 1;
@@ -2411,7 +2444,7 @@ body {
           backface-visibility: hidden;
 }
 
-.clientListBox .clientCmnBox .hoverLink {
+.clientListBox .simplebar-content .clientCmnBox .hoverLink {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
@@ -2442,12 +2475,12 @@ body {
   text-decoration: none;
 }
 
-.clientListBox .clientCmnBox .hoverLink span {
+.clientListBox .simplebar-content .clientCmnBox .hoverLink span {
   font-size: 18px;
   color: #fff;
 }
 
-.clientListBox .clientCmnBox:hover .hoverLink {
+.clientListBox .simplebar-content .clientCmnBox:hover .hoverLink {
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2469,8 +2502,89 @@ body {
   text-decoration: none;
 }
 
-.clientListBox .clientCmnBox:hover .hoverLink span {
+.clientListBox .simplebar-content .clientCmnBox:hover .hoverLink span {
   font-size: 18px;
   color: #fff;
+}
+
+.animatedButtonInner {
+  color: #141e55;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0;
+  padding: 0;
+}
+
+.animatedButtonInner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50% !important;
+  border-bottom: 1px solid #fff !important;
+  height: 1px;
+  -webkit-transition: width 0.3s ease-out 0s;
+  transition: width 0.3s ease-out 0s;
+  background: none !important;
+}
+
+.animatedButtonInner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.63;
+  height: 66%;
+  border-left: 1px solid #fff !important;
+  width: 1px;
+  -webkit-transition: height 0.2s ease-out 0.1s;
+  transition: height 0.2s ease-out 0.1s;
+}
+
+.animatedButtonInner:hover::before {
+  height: 0;
+  -webkit-transition: height 0.2s ease-out 0.1s;
+  transition: height 0.2s ease-out 0.1s;
+}
+
+.animatedButtonInner:hover::after {
+  width: calc(100% + 3px) !important;
+  -webkit-transition: width 0.3s ease-out 0s;
+  transition: width 0.3s ease-out 0s;
+}
+
+.animatedButtonInner span {
+  font-size: 11px !important;
+  line-height: 16px;
+  letter-spacing: 2px;
+  -webkit-transition: -webkit-transform 0.3s ease-out 0s;
+  transition: -webkit-transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  padding: 10px 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+}
+
+.animatedButtonInner:hover {
+  border: none !important;
+}
+
+.animatedButtonInner:hover span {
+  -webkit-transform: translate(20px);
+          transform: translate(20px);
+  -webkit-transition: -webkit-transform 0.3s ease-out 0s;
+  transition: -webkit-transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
+}
+
+.simplebar-track .simplebar-scrollbar {
+  background: #141e55;
 }
 /*# sourceMappingURL=dashboard.css.map */

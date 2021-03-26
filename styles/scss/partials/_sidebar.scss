@@ -7,7 +7,7 @@
   transition: all 0.3s;
   row-gap: 15px;
   box-shadow: 1px 1px 2px #00000028;
-  background-color: #001489;
+  background-color: #141e55;
   position: relative;
   @media only screen and (max-width: 767px) {
     position: fixed;
@@ -21,7 +21,7 @@
       display: block;
       position: absolute;
       right: -49px;
-      background-color: #001489;
+      background-color: #141e55;
       padding: 15px;
       z-index: 30;
       img {
@@ -67,7 +67,7 @@
   .searchBox {
     input {
       border: none;
-      background-color: #00179d;
+      background-color: rgba(0, 23, 157, 0.3);
       color: #fff;
       width: 100%;
       padding: 5px 0 5px 30px;
@@ -98,7 +98,7 @@
       display: flex;
       border: none;
       text-decoration: none;
-      background-color: #00179d;
+      background-color: rgba(0, 23, 157, 0.3);
       color: #fff;
       width: 100%;
       padding: 5px 0 5px 15px;
@@ -123,7 +123,7 @@
         display: block;
       }
       li a {
-        background-color: #001489;
+        background-color: #141e55;
         display: flex;
         column-gap: 10px;
         align-items: center;

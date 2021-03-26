@@ -96,27 +96,60 @@ form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .button-group .button {
-    color: #001489;
+  .button-group .animatedButton {
+    color: #141e55;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 11px;
     letter-spacing: 0;
+    padding: 0;
     &::after {
-      background: #001489;
-      width: 22px;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      border-bottom: 1px solid #141e55 !important;
       height: 1px;
-      left: -5px;
+      transition: width 0.3s ease-out 0s;
+      background: none !important;
     }
     &::before {
       content: "";
       position: absolute;
-      background: #001489;
-      left: -5px;
-      top: 1px;
-      width: 1px;
-      height: 22px;
+      left: 0;
+      bottom: 0;
       opacity: 0.63;
+      height: 66%;
+      border-left: 1px solid #141e55 !important;
+      width: 1px;
+      transition: height 0.2s ease-out 0.1s;
+    }
+    &:hover::before {
+      height: 0;
+      transition: height 0.2s ease-out 0.1s;
+    }
+    &:hover::after {
+      width: calc(100% + 3px);
+      transition: width 0.3s ease-out 0s;
+    }
+    span {
+      line-height: 16px;
+      letter-spacing: 2px;
+      transition: transform 0.3s ease-out 0s;
+      transform: translate(0);
+      padding: 10px 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      outline: none;
+    }
+    &:hover {
+      border: none !important;
+      span {
+        transform: translate(20px);
+        transition: transform 0.3s ease-out 0s;
+      }
     }
   }
   .userName {
@@ -145,7 +178,7 @@ form {
     min-width: 400px;
     box-shadow: 0px 10px 30px #bababa29;
     border-radius: 5px;
-    color: #485397;
+    color: #141e55;
     z-index: 2;
     row-gap: 8rem;
     @include responsive(phone-land) {
@@ -253,7 +286,7 @@ form {
       font-weight: 500;
       color: #333;
       option {
-        color: #485397;
+        color: #141e55;
       }
       &:focus,
       &.float {
@@ -264,7 +297,7 @@ form {
           .content-name {
             transform: translateY(-120%);
             font-size: 1.3rem;
-            color: #485397;
+            color: #141e55;
             font-weight: 500;
             @include responsive(phone-port) {
               font-size: 1.3rem;
@@ -290,7 +323,7 @@ form {
         .content-name {
           transform: translateY(-120%);
           font-size: 1.3rem;
-          color: #485397;
+          color: #141e55;
           font-weight: 500;
           @include responsive(phone-port) {
             font-size: 1.3rem;
@@ -309,7 +342,7 @@ form {
       width: 100%;
       height: 100%;
       pointer-events: none;
-      border-bottom: 1px solid #485397;
+      border-bottom: 1px solid #141e55;
       font-weight: 100;
       margin-bottom: 0;
       &::after {
@@ -320,7 +353,7 @@ form {
         width: 100%;
         height: 100%;
         pointer-events: none;
-        border-bottom: 3px solid #485397;
+        border-bottom: 3px solid #141e55;
         transform: scale(0, 1);
         transition: transform 0.3s ease;
       }

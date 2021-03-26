@@ -689,15 +689,36 @@ header .headerLeft {
           column-gap: 10px;
 }
 
-header .headerLeft h1 {
-  color: #001489;
-  font-size: 18px;
-  font-weight: bold;
+header .headerLeft img {
+  cursor: pointer;
 }
 
-header .headerLeft img {
-  background-color: #001489;
-  cursor: pointer;
+header .headerMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
+}
+
+header .headerMiddle h1 {
+  color: #141e55;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+header .headerMiddle span {
+  color: #141e55;
 }
 
 header .headerRight {

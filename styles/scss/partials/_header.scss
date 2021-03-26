@@ -15,14 +15,25 @@ header {
     display: flex;
     align-items: center;
     column-gap: 10px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+  .headerMiddle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5px;
     h1 {
-      color: #001489;
+      color: #141e55;
       font-size: 18px;
       font-weight: bold;
+      margin: 0;
     }
-    img {
-      background-color: #001489;
-      cursor: pointer;
+    span {
+      color: #141e55;
     }
   }
   .headerRight {

@@ -969,7 +969,7 @@ select:-webkit-autofill:focus {
 }
 
 .modal-content .customBtn {
-  background-color: #001489;
+  background-color: #141e55;
   color: #fff;
   font-weight: 300;
   border: 1px solid #eeeee4;
@@ -1005,7 +1005,7 @@ select:-webkit-autofill:focus {
   color: #aaa;
   font-size: 11px;
   font-weight: bold;
-  background-color: #001489;
+  background-color: #141e55;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -1191,30 +1191,80 @@ form {
           flex-direction: column;
 }
 
-form .button-group .button {
-  color: #001489;
+form .button-group .animatedButton {
+  color: #141e55;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 11px;
   letter-spacing: 0;
+  padding: 0;
 }
 
-form .button-group .button::after {
-  background: #001489;
-  width: 22px;
-  height: 1px;
-  left: -5px;
-}
-
-form .button-group .button::before {
+form .button-group .animatedButton::after {
   content: "";
   position: absolute;
-  background: #001489;
-  left: -5px;
-  top: 1px;
-  width: 1px;
-  height: 22px;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  border-bottom: 1px solid #141e55 !important;
+  height: 1px;
+  -webkit-transition: width 0.3s ease-out 0s;
+  transition: width 0.3s ease-out 0s;
+  background: none !important;
+}
+
+form .button-group .animatedButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   opacity: 0.63;
+  height: 66%;
+  border-left: 1px solid #141e55 !important;
+  width: 1px;
+  -webkit-transition: height 0.2s ease-out 0.1s;
+  transition: height 0.2s ease-out 0.1s;
+}
+
+form .button-group .animatedButton:hover::before {
+  height: 0;
+  -webkit-transition: height 0.2s ease-out 0.1s;
+  transition: height 0.2s ease-out 0.1s;
+}
+
+form .button-group .animatedButton:hover::after {
+  width: calc(100% + 3px);
+  -webkit-transition: width 0.3s ease-out 0s;
+  transition: width 0.3s ease-out 0s;
+}
+
+form .button-group .animatedButton span {
+  line-height: 16px;
+  letter-spacing: 2px;
+  -webkit-transition: -webkit-transform 0.3s ease-out 0s;
+  transition: -webkit-transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  padding: 10px 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+}
+
+form .button-group .animatedButton:hover {
+  border: none !important;
+}
+
+form .button-group .animatedButton:hover span {
+  -webkit-transform: translate(20px);
+          transform: translate(20px);
+  -webkit-transition: -webkit-transform 0.3s ease-out 0s;
+  transition: -webkit-transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s;
+  transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
 }
 
 form .userName {
@@ -1254,7 +1304,7 @@ form .login-form {
   -webkit-box-shadow: 0px 10px 30px #bababa29;
           box-shadow: 0px 10px 30px #bababa29;
   border-radius: 5px;
-  color: #485397;
+  color: #141e55;
   z-index: 2;
   row-gap: 8rem;
 }
@@ -1419,7 +1469,7 @@ form .login-form .form-top .button-group {
 
 .form-content .form-group input option,
 .form-content .form-group select option {
-  color: #485397;
+  color: #141e55;
 }
 
 .form-content .form-group input:focus ~ label::after, .form-content .form-group input.float ~ label::after,
@@ -1435,7 +1485,7 @@ form .login-form .form-top .button-group {
   -webkit-transform: translateY(-120%);
           transform: translateY(-120%);
   font-size: 1.3rem;
-  color: #485397;
+  color: #141e55;
   font-weight: 500;
 }
 
@@ -1477,7 +1527,7 @@ form .login-form .form-top .button-group {
   -webkit-transform: translateY(-120%);
           transform: translateY(-120%);
   font-size: 1.3rem;
-  color: #485397;
+  color: #141e55;
   font-weight: 500;
 }
 
@@ -1499,7 +1549,7 @@ form .login-form .form-top .button-group {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid #485397;
+  border-bottom: 1px solid #141e55;
   font-weight: 100;
   margin-bottom: 0;
 }
@@ -1512,7 +1562,7 @@ form .login-form .form-top .button-group {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 3px solid #485397;
+  border-bottom: 3px solid #141e55;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
   -webkit-transition: -webkit-transform 0.3s ease;
