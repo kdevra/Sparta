@@ -3,7 +3,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Report Desk </title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <!-- simple scrollbar -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
 
@@ -76,28 +76,31 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="requestDataBox">
-                    <a href="request-in-progress.html">
-                        <span class="progress">Request In Progress</span>
-                        <span class="bottomBox">
-                            <span class="numeric">20</span>
-                            <img src="images/requestInProgressIcon.png" alt="request in progress icon">
-                        </span>
-                    </a>
-                    <a href="complete-request.html">
-                        <span class="progress">Complete Request</span>
-                        <span class="bottomBox">
-                            <span class="numeric">20</span>
-                            <img src="images/completeRequestIcon.png" alt="complete request icon">
-                        </span>
-                    </a>
-                    <a href="reject-request.html">
-                        <span class="progress">Reject Request</span>
-                        <span class="bottomBox">
-                            <span class="numeric">20</span>
-                            <img src="images/rejectRequestIcon.png" alt="reject request icon">
-                        </span>
-                    </a>
+                <div class="requestDataBoxCover">
+                    <i class="fa fa-minus showHideBox"></i>
+                    <div class="requestDataBox hide">
+                        <a href="request-in-progress.html">
+                            <span class="progress">Request In Progress</span>
+                            <span class="bottomBox">
+                                <span class="numeric">20</span>
+                                <img src="images/requestInProgressIcon.png" alt="request in progress icon">
+                            </span>
+                        </a>
+                        <a href="complete-request.html">
+                            <span class="progress">Complete Request</span>
+                            <span class="bottomBox">
+                                <span class="numeric">20</span>
+                                <img src="images/completeRequestIcon.png" alt="complete request icon">
+                            </span>
+                        </a>
+                        <a href="reject-request.html">
+                            <span class="progress">Reject Request</span>
+                            <span class="bottomBox">
+                                <span class="numeric">20</span>
+                                <img src="images/rejectRequestIcon.png" alt="reject request icon">
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="clientListBox" data-simplebar>
                     <div class="clientCmnBox">
@@ -220,6 +223,10 @@
                     $(".sidebar").removeClass("hide")
                 }
             })
+            $('.showHideBox').click(function() {
+                $('.requestDataBox').toggleClass("hide",10000, "easeOutSine");
+                $(".showHideBox").toggleClass("fa-plus fa-minus");
+            });
         });
     </script>
 

@@ -3,12 +3,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Dashboard </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <!--Slider-->
 <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-<link rel="stylesheet" type="text/css" href="styles/classic.css" />
-<link rel="stylesheet" type="text/css" href="styles/classic.date.css" />
 
 <!-- simple scrollbar -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
@@ -36,15 +35,22 @@
             </div>
             <ul class="menu">
                 <li class="main-menu"><a class="show" href="javascript:void(0);">
-                    <span>Portfolio</span> <img src="images/dropdownIcon.svg" alt="dropdown icon"></a>
-                    <ul class="submenu show">
-                        <li><a href="javascript:void(0);"><input type="checkbox"><span>Holdings</span></a></li>
-                        <li><a href="javascript:void(0);"><input type="checkbox"><span>Performance</span></a></li>
-                        <li><a href="javascript:void(0);"><input type="checkbox"><span>Dashboards</span></a></li>
+                    <span>Portfolio</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="submenu">
+                        <li class="main-menu"><a href="javascript:void(0);"><span>Holdings</span>
+                            <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0);"><input type="checkbox"><span>Holdings</span></a></li>
+                            <li><a href="javascript:void(0);"><input type="checkbox"><span>Performance</span></a></li>
+                            <li><a href="javascript:void(0);"><input type="checkbox"><span>Dashboards</span></a></li>
+                        </ul>
+                        </li>
+                        <li><a href="javascript:void(0);"><span>Performance</span></a></li>
+                        <li><a href="javascript:void(0);"><span>Dashboards</span></a></li>
                     </ul>
                 </li>
                 <li class="main-menu"><a href="javascript:void(0);">
-                    <span>Product</span> <img src="images/dropdownIcon.svg" alt="dropdown icon"></a>
+                    <span>Product</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="submenu">
                         <li><a href="javascript:void(0);"><input type="checkbox"><span>Holdings</span></a></li>
                         <li><a href="javascript:void(0);"><input type="checkbox"><span>Performance</span></a></li>
@@ -56,7 +62,9 @@
         <div class="content">
             <header>
                 <div class="headerLeft">
-                    <img src="images/hamburgerIcon.svg" alt="hamburger icon">
+                    <div class="hamburger">
+                        <i class="fa fa-bars"></i>
+                    </div>
                 </div>
                 <div class="headerMiddle">
                     <h1>SPARTA</h1>
@@ -186,7 +194,7 @@
     <script type="text/javascript" src="scripts/custom.js"></script>
     <script>
         $(document).ready(function(){
-            $(".headerLeft img").click("on",function(){                
+            $(".hamburger").click("on",function(){                
                 $(".content").toggleClass("fullWidth");
                 if($(".sidebar").hasClass("hide")){
                     $(".sidebar").removeClass("hide");
@@ -201,12 +209,12 @@
                 $(".backDrop").removeClass("show");
             });
 
-            $(".main-menu > a").click(function () {
-                $(".main-menu > a").removeClass('show');
-                $(this).addClass('show');
-                $(".main-menu .submenu").removeClass('show');
-                $(this).parent().find("ul").addClass('show');
-            });
+            // $(".main-menu > a").click(function () {
+            //     $(".main-menu > a").removeClass('show');
+            //     $(this).addClass('show');
+            //     $(".main-menu .submenu").removeClass('show');
+            //     $(this).parent().find("ul").addClass('show');
+            // });
             if ($(window).width() < 768) {
                 $(".sidebar").addClass("hide mobile")
             } else {
@@ -231,7 +239,51 @@
             });
         });
     </script>
+    <script>
+        $.sidebarMenu = function(menu) {
+  var animationSpeed = 300;
+  
+  $(menu).on('click', 'li a', function(e) {
+    var $this = $(this);
+    var checkElement = $this.next();
 
+    if (checkElement.is('.submenu') && checkElement.is(':visible')) {
+      checkElement.slideUp(animationSpeed, function() {
+        checkElement.removeClass('menu-open');
+      });
+      checkElement.parent("li").removeClass("active");
+    }
+
+    //If the menu is not visible
+    //Get the parent menu
+    else if ((checkElement.is('.submenu')) && (!checkElement.is(':visible'))) {
+      var parent = $this.parents('ul').first();
+      //Close all open menus within the parent
+      var ul = parent.find('ul:visible').slideUp(animationSpeed);
+      //Remove the menu-open class from the parent
+      ul.removeClass('menu-open');
+      //Get the parent li
+      var parent_li = $this.parent("li");
+
+      //Open the target menu and add the menu-open class
+      checkElement.slideDown(animationSpeed, function() {
+        //Add the class active to the parent li
+        checkElement.addClass('menu-open');
+        parent.find('li.active').removeClass('active');
+        parent_li.addClass('active');
+      });
+    }
+    //if this isn't a link, prevent the page from being redirected
+    
+    if (checkElement.is('.submenu')) {
+        e.preventDefault();
+    }
+  });
+}
+    </script>
+<script>
+    $.sidebarMenu($('.menu'))
+  </script>
 </body>
 
 </html>

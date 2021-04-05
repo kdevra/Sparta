@@ -15,9 +15,26 @@ header {
     display: flex;
     align-items: center;
     column-gap: 10px;
-
-    img {
-      cursor: pointer;
+    .hamburger {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      background-color: #141e55;
+      @media only screen and (max-width: 400px) {
+        width: 30px;
+        height: 30px;
+      }
+      i {
+        cursor: pointer;
+        font-size: 30px;
+        color: #fff;
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+        }
+      }
     }
   }
   .headerMiddle {
@@ -26,6 +43,7 @@ header {
     justify-content: center;
     flex-direction: column;
     row-gap: 5px;
+
     h1 {
       color: #141e55;
       font-size: 18px;
@@ -34,6 +52,9 @@ header {
     }
     span {
       color: #141e55;
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
     }
   }
   .headerRight {

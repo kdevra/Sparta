@@ -1076,8 +1076,39 @@ header .headerLeft {
           column-gap: 10px;
 }
 
-header .headerLeft img {
+header .headerLeft .hamburger {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #141e55;
+}
+
+@media only screen and (max-width: 400px) {
+  header .headerLeft .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+header .headerLeft .hamburger i {
   cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+  header .headerLeft .hamburger i {
+    font-size: 20px;
+  }
 }
 
 header .headerMiddle {
@@ -1106,6 +1137,12 @@ header .headerMiddle h1 {
 
 header .headerMiddle span {
   color: #141e55;
+}
+
+@media only screen and (max-width: 600px) {
+  header .headerMiddle span {
+    display: none;
+  }
 }
 
 header .headerRight {
@@ -1310,6 +1347,16 @@ header .headerRight img {
   font-weight: 300;
 }
 
+.sidebar .menu .main-menu > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 15px;
+}
+
 .sidebar .menu > li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1339,6 +1386,7 @@ header .headerRight img {
 }
 
 .sidebar .menu .submenu {
+  padding-left: 10px;
   display: none;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -1377,6 +1425,11 @@ header .headerRight img {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.menu li.active > a > .fa-angle-left {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 body {
@@ -2257,20 +2310,57 @@ body {
   color: red;
 }
 
-.requestDataBox {
+.requestDataBoxCover {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.requestDataBoxCover i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  background-color: #ccc;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.requestDataBoxCover .requestDataBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 10px;
           column-gap: 10px;
-  background-color: #fff;
-  margin-top: 15px;
   border-radius: 5px;
-  padding: 10px;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.requestDataBoxCover .requestDataBox.hide {
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {
-  .requestDataBox {
+  .requestDataBoxCover .requestDataBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2279,7 +2369,7 @@ body {
   }
 }
 
-.requestDataBox a {
+.requestDataBoxCover .requestDataBox a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2297,11 +2387,11 @@ body {
   padding: 13px 19px;
 }
 
-.requestDataBox a > span {
+.requestDataBoxCover .requestDataBox a > span {
   font-size: 18px;
 }
 
-.requestDataBox a .bottomBox {
+.requestDataBoxCover .requestDataBox a .bottomBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2313,7 +2403,7 @@ body {
           align-items: center;
 }
 
-.requestDataBox a .bottomBox span {
+.requestDataBoxCover .requestDataBox a .bottomBox span {
   font-size: 43px;
   font-weight: 700;
   color: #2c2c2c;

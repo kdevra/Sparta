@@ -94,6 +94,11 @@
   .menu {
     font-size: 14px;
     font-weight: 300;
+    .main-menu > a {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 15px;
+    }
     & > li a {
       display: flex;
       border: none;
@@ -117,6 +122,7 @@
       }
     }
     .submenu {
+      padding-left: 10px;
       display: none;
       transition: all 0.3s linear;
       &.show {
@@ -146,4 +152,7 @@
       display: flex;
     }
   }
+}
+.menu li.active > a > .fa-angle-left {
+  transform: rotate(-90deg);
 }

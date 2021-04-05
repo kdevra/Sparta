@@ -689,8 +689,39 @@ header .headerLeft {
           column-gap: 10px;
 }
 
-header .headerLeft img {
+header .headerLeft .hamburger {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #141e55;
+}
+
+@media only screen and (max-width: 400px) {
+  header .headerLeft .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+header .headerLeft .hamburger i {
   cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+  header .headerLeft .hamburger i {
+    font-size: 20px;
+  }
 }
 
 header .headerMiddle {
@@ -719,6 +750,12 @@ header .headerMiddle h1 {
 
 header .headerMiddle span {
   color: #141e55;
+}
+
+@media only screen and (max-width: 600px) {
+  header .headerMiddle span {
+    display: none;
+  }
 }
 
 header .headerRight {
